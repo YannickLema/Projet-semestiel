@@ -1,0 +1,82 @@
+// Définition des variables
+$gutter-width: 20px;
+$col-nb: 12;
+$sm-breakpoint: 576px;
+$md-breakpoint: 768px;
+$lg-breakpoint: 992px;
+
+// Style de la grille
+* {
+  box-sizing: border-box;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: $gutter-width; // Ajout d'un espace à gauche
+  margin-right: -$gutter-width;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -$gutter-width;
+  margin-right: -$gutter-width;
+}
+
+.container {
+  overflow: hidden;
+}
+
+.content {
+  height: 1rem;
+  // --bg-color;
+}
+
+// Styles des colonnes
+@for $i from 1 through $col-nb {
+  .col-#{$i} {
+    flex: 0 0 calc((100% / #{$col-nb}) * #{$i} - #{$gutter-width});
+    max-width: calc((100% / #{$col-nb}) * #{$i} - #{$gutter-width});
+    padding-left: $gutter-width / 2;
+    padding-right: $gutter-width / 2;
+    box-sizing: border-box;
+  }
+}
+
+// Styles des colonnes pour les breakpoints spécifiques
+@for $i from 1 through $col-nb {
+  @media (min-width: $sm-breakpoint) {
+    .col-sm-#{$i} {
+      flex: 0 0 calc((100% / #{$col-nb}) * #{$i} - #{$gutter-width});
+      max-width: calc((100% / #{$col-nb}) * #{$i} - #{$gutter-width});
+      padding-left: $gutter-width / 2;
+      padding-right: $gutter-width / 2;
+      box-sizing: border-box;
+    }
+  }
+}
+
+@for $i from 1 through $col-nb {
+  @media (min-width: $md-breakpoint) {
+    .col-md-#{$i} {
+      flex: 0 0 calc((100% / #{$col-nb}) * #{$i} - #{$gutter-width});
+      max-width: calc((100% / #{$col-nb}) * #{$i} - #{$gutter-width});
+      padding-left: $gutter-width / 2;
+      padding-right: $gutter-width / 2;
+      box-sizing: border-box;
+    }
+  }
+}
+
+@for $i from 1 through $col-nb {
+  @media (min-width: $lg-breakpoint) {
+    .col-lg-#{$i} {
+      flex: 0 0 calc((100% / #{$col-nb}) * #{$i} - #{$gutter-width});
+      max-width: calc((100% / #{$col-nb}) * #{$i} - #{$gutter-width});
+      padding-left: $gutter-width / 2;
+      padding-right: $gutter-width / 2;
+      box-sizing: border-box;
+    }
+  }
+}

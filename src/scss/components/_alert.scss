@@ -1,0 +1,40 @@
+// components/_alert.scss
+
+// Variables
+$alert-padding: 15px;
+$alert-border-radius: 4px;
+$alert-color: #333;
+$alert-background-color: #f8f8f8;
+$alert-border-color: #ddd;
+$alert-error-color: #d9534f;
+$alert-success-color: #5cb85c;
+$alert-warning-color: #f0ad4e;
+$alert-info-color: #5bc0de;
+
+// Mixin pour définir le style de l'alerte
+@mixin alert-style($color, $background, $border) {
+  color: $color;
+  background-color: $background;
+  border: 1px solid $border;
+  padding: $alert-padding;
+  border-radius: $alert-border-radius;
+}
+
+// Classes pour les différentes types d'alerte
+.alert {
+  &.alert-error {
+    @include alert-style($alert-error-color, lighten($alert-error-color, 40%), darken($alert-error-color, 10%));
+  }
+
+  &.alert-success {
+    @include alert-style($alert-success-color, lighten($alert-success-color, 40%), darken($alert-success-color, 10%));
+  }
+
+  &.alert-warning {
+    @include alert-style($alert-warning-color, lighten($alert-warning-color, 40%), darken($alert-warning-color, 10%));
+  }
+
+  &.alert-info {
+    @include alert-style($alert-info-color, lighten($alert-info-color, 40%), darken($alert-info-color, 10%));
+  }
+}

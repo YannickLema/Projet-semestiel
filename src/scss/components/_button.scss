@@ -1,0 +1,15 @@
+.button{
+	padding: 1em;
+	display: inline-block;
+	color: var(--white);
+	background-color: var(--bg-color);
+	text-decoration: none;
+	cursor: pointer;
+	text-transform: uppercase;
+	border: none;
+	font-size: inherit;
+	line-height: 1;
+	&:hover{
+		background-color: var(--bg-color-hover);
+	}
+}

@@ -1,0 +1,25 @@
+$white: #FFF;
+$grey: #AAA;
+$light-grey: #F2F2F2;
+$dark-grey: #444;
+$red: #ce0a0a;
+$green: #31aa66;
+$black: #000;
+
+
+:root{
+	--white: #{$white};
+	--grey: #{$grey};
+	--light-grey: #{$light-grey};
+	--dark-grey: #{$dark-grey};
+	--red: #{$red};
+	--green: #{$green};
+	--black: #{$black};
+	--text-color: #{$black};
+	--red-lighten: #{lighten($red, 10%)};
+	--green-lighten: #{lighten($green, 10%)};
+
+	--bg-color: #{$grey};
+	--bg-color-hover: #{lighten($grey, 10%)};
+	
+}
