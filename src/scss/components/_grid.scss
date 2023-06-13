@@ -11,10 +11,11 @@ $lg-breakpoint: 992px;
 }
 
 .grid {
-  display: flex;
-  flex-wrap: wrap;
-  margin-left: $gutter-width; // Ajout d'un espace à gauche
-  margin-right: -$gutter-width;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 15px;
+    overflow: hidden;
 }
 
 .row {
@@ -36,10 +37,10 @@ $lg-breakpoint: 992px;
 // Styles des colonnes
 @for $i from 1 through $col-nb {
   .col-#{$i} {
-    flex: 0 0 calc((100% / #{$col-nb}) * #{$i} - #{$gutter-width});
-    max-width: calc((100% / #{$col-nb}) * #{$i} - #{$gutter-width});
-    padding-left: $gutter-width / 2;
-    padding-right: $gutter-width / 2;
+    flex: 0 0 calc((100% / #{$col-nb}) * #{$i});
+    max-width: calc((100% / #{$col-nb}) * #{$i});
+    padding-left: $gutter-width;
+    padding-right: $gutter-width;
     box-sizing: border-box;
   }
 }
@@ -48,10 +49,10 @@ $lg-breakpoint: 992px;
 @for $i from 1 through $col-nb {
   @media (min-width: $sm-breakpoint) {
     .col-sm-#{$i} {
-      flex: 0 0 calc((100% / #{$col-nb}) * #{$i} - #{$gutter-width});
-      max-width: calc((100% / #{$col-nb}) * #{$i} - #{$gutter-width});
-      padding-left: $gutter-width / 2;
-      padding-right: $gutter-width / 2;
+      flex: 0 0 calc((100% / #{$col-nb}) * #{$i});
+      max-width: calc((100% / #{$col-nb}) * #{$i});
+      padding-left: $gutter-width;
+      padding-right: $gutter-width;
       box-sizing: border-box;
     }
   }
@@ -60,10 +61,10 @@ $lg-breakpoint: 992px;
 @for $i from 1 through $col-nb {
   @media (min-width: $md-breakpoint) {
     .col-md-#{$i} {
-      flex: 0 0 calc((100% / #{$col-nb}) * #{$i} - #{$gutter-width});
-      max-width: calc((100% / #{$col-nb}) * #{$i} - #{$gutter-width});
-      padding-left: $gutter-width / 2;
-      padding-right: $gutter-width / 2;
+      flex: 0 0 calc((100% / #{$col-nb}) * #{$i});
+      max-width: calc((100% / #{$col-nb}) * #{$i});
+      padding-left: $gutter-width;
+      padding-right: $gutter-width;
       box-sizing: border-box;
     }
   }
@@ -72,11 +73,21 @@ $lg-breakpoint: 992px;
 @for $i from 1 through $col-nb {
   @media (min-width: $lg-breakpoint) {
     .col-lg-#{$i} {
-      flex: 0 0 calc((100% / #{$col-nb}) * #{$i} - #{$gutter-width});
-      max-width: calc((100% / #{$col-nb}) * #{$i} - #{$gutter-width});
-      padding-left: $gutter-width / 2;
-      padding-right: $gutter-width / 2;
+      flex: 0 0 calc((100% / #{$col-nb}) * #{$i});
+      max-width: calc((100% / #{$col-nb}) * #{$i});
+      padding-left: $gutter-width;
+      padding-right: $gutter-width;
       box-sizing: border-box;
     }
+  }
+}
+
+@for $i from 1 through $col-nb - 1 {
+  .offset-#{$i} {
+    margin-left: percentage($i / $col-nb);
+  }
+
+  .hidden-#{$i} {
+    display: none;
   }
 }
