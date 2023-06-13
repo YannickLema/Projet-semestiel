@@ -1,3 +1,4 @@
+// variables de couleurs 
 $white: #FFF;
 $grey: #AAA;
 $light-grey: #F2F2F2;
@@ -6,6 +7,12 @@ $red: #ce0a0a;
 $green: #31aa66;
 $black: #000;
 
+//variables de medias 
+$gutter-width: 20px;
+$col-nb: 12;
+$sm-breakpoint: 576px;
+$md-breakpoint: 768px;
+$lg-breakpoint: 992px;
 
 :root{
 	--white: #{$white};
@@ -23,3 +30,4 @@ $black: #000;
 	--bg-color-hover: #{lighten($grey, 10%)};
 	
 }
+

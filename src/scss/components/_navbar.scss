@@ -13,29 +13,27 @@ $navbar-text-color: #fff;
   padding: 0 20px;
   
   /* Add any additional styles as needed */
-}
+  &-logo{
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  &-nav{
+    display: flex;
+    list-style: none;
+    margin-left: auto;
 
-.navbar-logo {
-  font-size: 1.5rem;
-  font-weight: bold;
-}
-
-.navbar-nav {
-  display: flex;
-  list-style: none;
-  margin-left: auto;
-}
-
-.navbar-nav-item {
-  margin-left: 20px;
-  
-  a {
-    color: $navbar-text-color;
-    text-decoration: none;
-    transition: color 0.3s;
-    
-    &:hover {
-      color: lighten($navbar-text-color, 20%);
+    &-item {
+      margin-left: 20px;
+      
+      a {
+        color: $navbar-text-color;
+        text-decoration: none;
+        transition: color 0.3s;
+        
+        &:hover {
+          color: lighten($navbar-text-color, 20%);
+        }
+      }
     }
   }
 }

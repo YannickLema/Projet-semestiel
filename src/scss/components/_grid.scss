@@ -1,11 +1,6 @@
-// Définition des variables
-$gutter-width: 20px;
-$col-nb: 12;
-$sm-breakpoint: 576px;
-$md-breakpoint: 768px;
-$lg-breakpoint: 992px;
 
-// Style de la grille
+@import "../partials/variables";
+
 * {
   box-sizing: border-box;
 }
@@ -82,12 +77,12 @@ $lg-breakpoint: 992px;
   }
 }
 
-@for $i from 1 through $col-nb - 1 {
-  .offset-#{$i} {
-    margin-left: percentage($i / $col-nb);
-  }
+// @for $i from 1 through $col-nb - 1 {
+//   .offset-#{$i} {
+//     margin-left: percentage($i / $col-nb);
+//   }
 
-  .hidden-#{$i} {
-    display: none;
-  }
-}
+//   .hidden-#{$i} {
+//     display: none;
+//   }
+// }
