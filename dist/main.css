@@ -71,6 +71,7 @@ p {
 }
 
 .banner {
+  width: 100%;
   aspect-ratio: 100/42;
   background-size: cover;
   background-position: center;
@@ -88,16 +89,18 @@ p {
   font-weight: 700;
 }
 
-/* Navbar variables */
-/* Navbar styles */
 .navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
   height: 60px;
   background-color: #333;
-  color: #fff;
+  color: #FFF;
   display: flex;
   align-items: center;
   padding: 0 20px;
-  /* Add any additional styles as needed */
 }
 .navbar-logo {
   font-size: 1.5rem;
@@ -108,19 +111,18 @@ p {
   list-style: none;
   margin-left: auto;
 }
-.navbar-nav-item {
+.navbar-item {
   margin-left: 20px;
 }
-.navbar-nav-item a {
-  color: #fff;
+.navbar-item a {
+  color: #FFF;
   text-decoration: none;
   transition: color 0.3s;
 }
-.navbar-nav-item a:hover {
+.navbar-item a:hover {
   color: white;
 }
 
-/* Form control variables */
 /* Form control styles */
 .form-control {
   display: block;
@@ -137,28 +139,28 @@ p {
   box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
 }
 
-.alert.alert-error {
+.alert-error {
   color: #d9534f;
   background-color: #fdf7f7;
   border: 1px solid #c9302c;
   padding: 15px;
   border-radius: 4px;
 }
-.alert.alert-success {
+.alert-success {
   color: #5cb85c;
   background-color: #eaf6ea;
   border: 1px solid #449d44;
   padding: 15px;
   border-radius: 4px;
 }
-.alert.alert-warning {
+.alert-warning {
   color: #f0ad4e;
   background-color: white;
   border: 1px solid #ec971f;
   padding: 15px;
   border-radius: 4px;
 }
-.alert.alert-info {
+.alert-info {
   color: #5bc0de;
   background-color: white;
   border: 1px solid #31b0d5;
@@ -167,49 +169,41 @@ p {
 }
 
 .card {
-  background-color: #fff;
+  background-color: #ffffff;
   border-radius: 4px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   padding: 20px;
 }
-
 .card-title {
-  font-size: 18px;
+  font-size: 20px;
   font-weight: bold;
   margin-bottom: 10px;
 }
-
 .card-content {
   font-size: 16px;
-  line-height: 1.4;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
-
-.card-actions {
-  display: flex;
-  justify-content: flex-end;
+@media (max-width: 768px) {
+  .card {
+    padding: 10px;
+  }
+  .card-title {
+    font-size: 18px;
+  }
+  .card-content {
+    font-size: 14px;
+  }
 }
-.card-actions .button {
-  margin-left: 10px;
-}
-
-:root {
-  --white: #FFF;
-  --grey: #AAA;
-  --light-grey: #F2F2F2;
-  --dark-grey: #444;
-  --red: #ce0a0a;
-  --green: #31aa66;
-  --black: #000;
-  --text-color: #000;
-  --red-lighten: #f41717;
-  --green-lighten: #45c97f;
-  --bg-color: #AAA;
-  --bg-color-hover: #c4c4c4;
-}
-
-* {
-  box-sizing: border-box;
+@media (max-width: 576px) {
+  .card {
+    padding: 5px;
+  }
+  .card-title {
+    font-size: 16px;
+  }
+  .card-content {
+    font-size: 12px;
+  }
 }
 
 .grid {
@@ -231,16 +225,12 @@ p {
   overflow: hidden;
 }
 
-.content {
-  height: 1rem;
-}
-
 .col-1 {
   flex: 0 0 calc((100% / 12) * 1);
   max-width: calc((100% / 12) * 1);
   padding-left: 20px;
   padding-right: 20px;
-  box-sizing: border-box;
+  padding-bottom: 15px;
 }
 
 .col-2 {
@@ -248,7 +238,7 @@ p {
   max-width: calc((100% / 12) * 2);
   padding-left: 20px;
   padding-right: 20px;
-  box-sizing: border-box;
+  padding-bottom: 15px;
 }
 
 .col-3 {
@@ -256,7 +246,7 @@ p {
   max-width: calc((100% / 12) * 3);
   padding-left: 20px;
   padding-right: 20px;
-  box-sizing: border-box;
+  padding-bottom: 15px;
 }
 
 .col-4 {
@@ -264,7 +254,7 @@ p {
   max-width: calc((100% / 12) * 4);
   padding-left: 20px;
   padding-right: 20px;
-  box-sizing: border-box;
+  padding-bottom: 15px;
 }
 
 .col-5 {
@@ -272,7 +262,7 @@ p {
   max-width: calc((100% / 12) * 5);
   padding-left: 20px;
   padding-right: 20px;
-  box-sizing: border-box;
+  padding-bottom: 15px;
 }
 
 .col-6 {
@@ -280,7 +270,7 @@ p {
   max-width: calc((100% / 12) * 6);
   padding-left: 20px;
   padding-right: 20px;
-  box-sizing: border-box;
+  padding-bottom: 15px;
 }
 
 .col-7 {
@@ -288,7 +278,7 @@ p {
   max-width: calc((100% / 12) * 7);
   padding-left: 20px;
   padding-right: 20px;
-  box-sizing: border-box;
+  padding-bottom: 15px;
 }
 
 .col-8 {
@@ -296,7 +286,7 @@ p {
   max-width: calc((100% / 12) * 8);
   padding-left: 20px;
   padding-right: 20px;
-  box-sizing: border-box;
+  padding-bottom: 15px;
 }
 
 .col-9 {
@@ -304,7 +294,7 @@ p {
   max-width: calc((100% / 12) * 9);
   padding-left: 20px;
   padding-right: 20px;
-  box-sizing: border-box;
+  padding-bottom: 15px;
 }
 
 .col-10 {
@@ -312,7 +302,7 @@ p {
   max-width: calc((100% / 12) * 10);
   padding-left: 20px;
   padding-right: 20px;
-  box-sizing: border-box;
+  padding-bottom: 15px;
 }
 
 .col-11 {
@@ -320,7 +310,7 @@ p {
   max-width: calc((100% / 12) * 11);
   padding-left: 20px;
   padding-right: 20px;
-  box-sizing: border-box;
+  padding-bottom: 15px;
 }
 
 .col-12 {
@@ -328,7 +318,7 @@ p {
   max-width: calc((100% / 12) * 12);
   padding-left: 20px;
   padding-right: 20px;
-  box-sizing: border-box;
+  padding-bottom: 15px;
 }
 
 @media (min-width: 576px) {
@@ -337,7 +327,7 @@ p {
     max-width: calc((100% / 12) * 1);
     padding-left: 20px;
     padding-right: 20px;
-    box-sizing: border-box;
+    padding-bottom: 15px;
   }
 }
 @media (min-width: 576px) {
@@ -346,7 +336,7 @@ p {
     max-width: calc((100% / 12) * 2);
     padding-left: 20px;
     padding-right: 20px;
-    box-sizing: border-box;
+    padding-bottom: 15px;
   }
 }
 @media (min-width: 576px) {
@@ -355,7 +345,7 @@ p {
     max-width: calc((100% / 12) * 3);
     padding-left: 20px;
     padding-right: 20px;
-    box-sizing: border-box;
+    padding-bottom: 15px;
   }
 }
 @media (min-width: 576px) {
@@ -364,7 +354,7 @@ p {
     max-width: calc((100% / 12) * 4);
     padding-left: 20px;
     padding-right: 20px;
-    box-sizing: border-box;
+    padding-bottom: 15px;
   }
 }
 @media (min-width: 576px) {
@@ -373,7 +363,7 @@ p {
     max-width: calc((100% / 12) * 5);
     padding-left: 20px;
     padding-right: 20px;
-    box-sizing: border-box;
+    padding-bottom: 15px;
   }
 }
 @media (min-width: 576px) {
@@ -382,7 +372,7 @@ p {
     max-width: calc((100% / 12) * 6);
     padding-left: 20px;
     padding-right: 20px;
-    box-sizing: border-box;
+    padding-bottom: 15px;
   }
 }
 @media (min-width: 576px) {
@@ -391,7 +381,7 @@ p {
     max-width: calc((100% / 12) * 7);
     padding-left: 20px;
     padding-right: 20px;
-    box-sizing: border-box;
+    padding-bottom: 15px;
   }
 }
 @media (min-width: 576px) {
@@ -400,7 +390,7 @@ p {
     max-width: calc((100% / 12) * 8);
     padding-left: 20px;
     padding-right: 20px;
-    box-sizing: border-box;
+    padding-bottom: 15px;
   }
 }
 @media (min-width: 576px) {
@@ -409,7 +399,7 @@ p {
     max-width: calc((100% / 12) * 9);
     padding-left: 20px;
     padding-right: 20px;
-    box-sizing: border-box;
+    padding-bottom: 15px;
   }
 }
 @media (min-width: 576px) {
@@ -418,7 +408,7 @@ p {
     max-width: calc((100% / 12) * 10);
     padding-left: 20px;
     padding-right: 20px;
-    box-sizing: border-box;
+    padding-bottom: 15px;
   }
 }
 @media (min-width: 576px) {
@@ -427,7 +417,7 @@ p {
     max-width: calc((100% / 12) * 11);
     padding-left: 20px;
     padding-right: 20px;
-    box-sizing: border-box;
+    padding-bottom: 15px;
   }
 }
 @media (min-width: 576px) {
@@ -436,7 +426,7 @@ p {
     max-width: calc((100% / 12) * 12);
     padding-left: 20px;
     padding-right: 20px;
-    box-sizing: border-box;
+    padding-bottom: 15px;
   }
 }
 @media (min-width: 768px) {
@@ -445,7 +435,7 @@ p {
     max-width: calc((100% / 12) * 1);
     padding-left: 20px;
     padding-right: 20px;
-    box-sizing: border-box;
+    padding-bottom: 15px;
   }
 }
 @media (min-width: 768px) {
@@ -454,7 +444,7 @@ p {
     max-width: calc((100% / 12) * 2);
     padding-left: 20px;
     padding-right: 20px;
-    box-sizing: border-box;
+    padding-bottom: 15px;
   }
 }
 @media (min-width: 768px) {
@@ -463,7 +453,7 @@ p {
     max-width: calc((100% / 12) * 3);
     padding-left: 20px;
     padding-right: 20px;
-    box-sizing: border-box;
+    padding-bottom: 15px;
   }
 }
 @media (min-width: 768px) {
@@ -472,7 +462,7 @@ p {
     max-width: calc((100% / 12) * 4);
     padding-left: 20px;
     padding-right: 20px;
-    box-sizing: border-box;
+    padding-bottom: 15px;
   }
 }
 @media (min-width: 768px) {
@@ -481,7 +471,7 @@ p {
     max-width: calc((100% / 12) * 5);
     padding-left: 20px;
     padding-right: 20px;
-    box-sizing: border-box;
+    padding-bottom: 15px;
   }
 }
 @media (min-width: 768px) {
@@ -490,7 +480,7 @@ p {
     max-width: calc((100% / 12) * 6);
     padding-left: 20px;
     padding-right: 20px;
-    box-sizing: border-box;
+    padding-bottom: 15px;
   }
 }
 @media (min-width: 768px) {
@@ -499,7 +489,7 @@ p {
     max-width: calc((100% / 12) * 7);
     padding-left: 20px;
     padding-right: 20px;
-    box-sizing: border-box;
+    padding-bottom: 15px;
   }
 }
 @media (min-width: 768px) {
@@ -508,7 +498,7 @@ p {
     max-width: calc((100% / 12) * 8);
     padding-left: 20px;
     padding-right: 20px;
-    box-sizing: border-box;
+    padding-bottom: 15px;
   }
 }
 @media (min-width: 768px) {
@@ -517,7 +507,7 @@ p {
     max-width: calc((100% / 12) * 9);
     padding-left: 20px;
     padding-right: 20px;
-    box-sizing: border-box;
+    padding-bottom: 15px;
   }
 }
 @media (min-width: 768px) {
@@ -526,7 +516,7 @@ p {
     max-width: calc((100% / 12) * 10);
     padding-left: 20px;
     padding-right: 20px;
-    box-sizing: border-box;
+    padding-bottom: 15px;
   }
 }
 @media (min-width: 768px) {
@@ -535,7 +525,7 @@ p {
     max-width: calc((100% / 12) * 11);
     padding-left: 20px;
     padding-right: 20px;
-    box-sizing: border-box;
+    padding-bottom: 15px;
   }
 }
 @media (min-width: 768px) {
@@ -544,7 +534,7 @@ p {
     max-width: calc((100% / 12) * 12);
     padding-left: 20px;
     padding-right: 20px;
-    box-sizing: border-box;
+    padding-bottom: 15px;
   }
 }
 @media (min-width: 992px) {
@@ -553,7 +543,7 @@ p {
     max-width: calc((100% / 12) * 1);
     padding-left: 20px;
     padding-right: 20px;
-    box-sizing: border-box;
+    padding-bottom: 15px;
   }
 }
 @media (min-width: 992px) {
@@ -562,7 +552,7 @@ p {
     max-width: calc((100% / 12) * 2);
     padding-left: 20px;
     padding-right: 20px;
-    box-sizing: border-box;
+    padding-bottom: 15px;
   }
 }
 @media (min-width: 992px) {
@@ -571,7 +561,7 @@ p {
     max-width: calc((100% / 12) * 3);
     padding-left: 20px;
     padding-right: 20px;
-    box-sizing: border-box;
+    padding-bottom: 15px;
   }
 }
 @media (min-width: 992px) {
@@ -580,7 +570,7 @@ p {
     max-width: calc((100% / 12) * 4);
     padding-left: 20px;
     padding-right: 20px;
-    box-sizing: border-box;
+    padding-bottom: 15px;
   }
 }
 @media (min-width: 992px) {
@@ -589,7 +579,7 @@ p {
     max-width: calc((100% / 12) * 5);
     padding-left: 20px;
     padding-right: 20px;
-    box-sizing: border-box;
+    padding-bottom: 15px;
   }
 }
 @media (min-width: 992px) {
@@ -598,7 +588,7 @@ p {
     max-width: calc((100% / 12) * 6);
     padding-left: 20px;
     padding-right: 20px;
-    box-sizing: border-box;
+    padding-bottom: 15px;
   }
 }
 @media (min-width: 992px) {
@@ -607,7 +597,7 @@ p {
     max-width: calc((100% / 12) * 7);
     padding-left: 20px;
     padding-right: 20px;
-    box-sizing: border-box;
+    padding-bottom: 15px;
   }
 }
 @media (min-width: 992px) {
@@ -616,7 +606,7 @@ p {
     max-width: calc((100% / 12) * 8);
     padding-left: 20px;
     padding-right: 20px;
-    box-sizing: border-box;
+    padding-bottom: 15px;
   }
 }
 @media (min-width: 992px) {
@@ -625,7 +615,7 @@ p {
     max-width: calc((100% / 12) * 9);
     padding-left: 20px;
     padding-right: 20px;
-    box-sizing: border-box;
+    padding-bottom: 15px;
   }
 }
 @media (min-width: 992px) {
@@ -634,7 +624,7 @@ p {
     max-width: calc((100% / 12) * 10);
     padding-left: 20px;
     padding-right: 20px;
-    box-sizing: border-box;
+    padding-bottom: 15px;
   }
 }
 @media (min-width: 992px) {
@@ -643,7 +633,7 @@ p {
     max-width: calc((100% / 12) * 11);
     padding-left: 20px;
     padding-right: 20px;
-    box-sizing: border-box;
+    padding-bottom: 15px;
   }
 }
 @media (min-width: 992px) {
@@ -652,7 +642,7 @@ p {
     max-width: calc((100% / 12) * 12);
     padding-left: 20px;
     padding-right: 20px;
-    box-sizing: border-box;
+    padding-bottom: 15px;
   }
 }
 

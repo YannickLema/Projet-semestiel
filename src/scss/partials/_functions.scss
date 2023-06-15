@@ -14,3 +14,21 @@
 	padding: 0;
 	margin: 0;
 }
+
+@mixin navbar-link {
+	color: $navbar-link-color;
+	text-decoration: none;
+	transition: color $navbar-link-transition-duration;
+  
+	&:hover {
+	  color: $navbar-link-hover-color;
+	}
+  }
+
+@mixin alert-style($color, $background, $border) {
+  color: $color;
+  background-color: $background;
+  border: 1px solid $border;
+  padding: $alert-padding;
+  border-radius: $alert-border-radius;
+}

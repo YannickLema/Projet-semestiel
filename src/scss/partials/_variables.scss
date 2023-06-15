@@ -6,13 +6,34 @@ $dark-grey: #444;
 $red: #ce0a0a;
 $green: #31aa66;
 $black: #000;
+$navbar-bg-color: #333;
+$alert-color: #333;
+$alert-background-color: #f8f8f8;
+$alert-border-color: #ddd;
+$alert-error-color: #d9534f;
+$alert-success-color: #5cb85c;
+$alert-warning-color: #f0ad4e;
+$alert-info-color: #5bc0de;
+$form-control-border-color: #ccc;
+$form-control-focus-border-color: #007bff;
+$form-control-focus-box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
 
-//variables de medias 
+//variables de medias
 $gutter-width: 20px;
 $col-nb: 12;
 $sm-breakpoint: 576px;
 $md-breakpoint: 768px;
 $lg-breakpoint: 992px;
+$navbar-height: 60px;
+$navbar-text-color: $white;
+$navbar-link-color: $navbar-text-color;
+$navbar-link-hover-color: lighten($navbar-text-color, 20%);
+$navbar-link-transition-duration: 0.3s;
+$alert-padding: 15px;
+$alert-border-radius: 4px;
+$form-control-height: 40px;
+$form-control-padding: 10px;
+
 
 :root{
 	--white: #{$white};

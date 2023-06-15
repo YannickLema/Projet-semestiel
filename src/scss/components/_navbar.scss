@@ -1,10 +1,10 @@
-/* Navbar variables */
-$navbar-height: 60px;
-$navbar-bg-color: #333;
-$navbar-text-color: #fff;
-
-/* Navbar styles */
+// Navbar styles
 .navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
   height: $navbar-height;
   background-color: $navbar-bg-color;
   color: $navbar-text-color;
@@ -12,28 +12,22 @@ $navbar-text-color: #fff;
   align-items: center;
   padding: 0 20px;
   
-  /* Add any additional styles as needed */
-  &-logo{
+  &-logo {
     font-size: 1.5rem;
     font-weight: bold;
   }
-  &-nav{
+  
+  &-nav {
     display: flex;
     list-style: none;
     margin-left: auto;
-
+  }
     &-item {
       margin-left: 20px;
       
       a {
-        color: $navbar-text-color;
-        text-decoration: none;
-        transition: color 0.3s;
-        
-        &:hover {
-          color: lighten($navbar-text-color, 20%);
-        }
+        @include navbar-link;
       }
     }
-  }
+  
 }
