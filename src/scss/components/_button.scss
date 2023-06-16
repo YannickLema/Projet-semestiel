@@ -1,4 +1,4 @@
-.button{
+.button {
 	padding: 1em;
 	display: inline-block;
 	color: var(--white);
@@ -9,7 +9,16 @@
 	border: none;
 	font-size: inherit;
 	line-height: 1;
-	&:hover{
-		background-color: var(--bg-color-hover);
+  
+	&:hover {
+	  background-color: var(--bg-color-hover);
 	}
-}
+  }
+  
+  .btn-home {
+	position: absolute;
+	top: 1rem;
+	left: 1rem;
+	
+  }
+  

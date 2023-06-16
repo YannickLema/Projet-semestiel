@@ -1,20 +1,47 @@
 .card {
     background-color: #ffffff;
-    border-radius: 4px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 20px;
+    border-radius: 10px;
+	box-shadow: 0px 0px 8px rgba(0,0,0,0.2);
+	transition: all 0.5s;
+	top: 0;
+	display: flex;
+	flex-direction: column;
+    padding: 20px; // Ajout d'un espace supplémentaire en haut de la carte
+    position: relative;
+    margin-top: 1em;
     
+    &:hover{
+        transform: translateY(-10px);
+        box-shadow: 0px 0px 24px rgba(0,0,0,0.2);
+    }
+
     &-title {
       font-size: 20px;
       font-weight: bold;
+      margin-top: -30px;
       margin-bottom: 10px;
     }
     
     &-content {
       font-size: 16px;
-      margin-bottom: 10px;
+      margin-bottom: 0px;
     }
-    
+
+    &-image {
+        width: $image-size;
+        height: 0;
+        padding-bottom: $image-size; // Crée un espace réservé carré
+        overflow: hidden;
+        margin-bottom: -10px; // Ajout d'une marge négative
+        
+        img {
+          width: 100%;
+          height: auto;
+          object-fit: cover; // Redimensionne l'image pour remplir l'espace réservé
+          border-radius: 4px;
+        }
+      }
+      
     @media (max-width: 768px) {
       padding: 10px;
       

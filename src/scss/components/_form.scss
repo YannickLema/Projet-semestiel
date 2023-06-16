@@ -14,3 +14,44 @@
     box-shadow: $form-control-focus-box-shadow;
   }
 }
+
+.form-container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: $form-spacing;
+  
+    h2 {
+      text-align: center;
+      margin-bottom: $form-spacing;
+    }
+  
+    form {
+      .form-group {
+        margin-bottom: $form-spacing;
+  
+        label {
+          display: block;
+          margin-bottom: 0.5rem;
+          font-weight: bold;
+        }
+  
+        input[type="text"],
+        input[type="email"],
+        input[type="password"] {
+          display: block;
+          width: 100%;
+          padding: 0.5rem;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+        }
+      }
+  
+      .form-actions {
+        text-align: center;
+  
+        button[type="submit"] {
+          @include button-style;
+        }
+      }
+    }
+  }
